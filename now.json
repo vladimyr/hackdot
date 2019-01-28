@@ -1,0 +1,10 @@
+{
+  "name": "hackdot",
+  "version": 2,
+  "alias": ["hackdot.now.sh"],
+  "builds": [{ "src": "api/**", "use": "@now/node" }],
+  "routes": [{
+    "src": "/export/(?<story>.*)",
+    "dest": "/api/slashdot/export.js?story=$story"
+  }]
+}
